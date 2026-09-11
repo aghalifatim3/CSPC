@@ -3,6 +3,7 @@
 My coursework repository. Each practical is under PW<n>/Lab <X>/.
 
 ## Setup
+
 Create the environment for a given lab:
     conda env create -f PW<n>/Lab <X>/environment.yml
     conda activate cspc
@@ -21,4 +22,4 @@ Speed comparison (loop vs NumPy):
 Tests: all passing, yes
 
 Conclusion:
-NumPy was way faster than I expected,mostly because it handles all the atoms at once instead of going through them one by one like the loop does.This lab also helped me get more comfortable with git branching and merging,since I hadn't really practiced that hands-on before.
+I saw that NumPy was way faster than I expected,mostly because it handles all the atoms at once instead of going through them one by one like the loop does.This lab also helped me get more comfortable with git branching and merging,since I hadn't really practiced that hands-on before.
