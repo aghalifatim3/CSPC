@@ -1,13 +1,24 @@
-# CSPC
+# CSPC - Computer Science for Physics and Chemistry
 
-## PW1 — Lab A
+My coursework repository. Each practical is under PW<n>/Lab <X>/.
 
-Tests: 3/3 passed (test_starts_at_N0, test_rejects_negative_rate, test_matches_law)
+## Setup
+Create the environment for a given lab:
+    conda env create -f PW<n>/Lab <X>/environment.yml
+    conda activate cspc
 
-Speed comparison (N = 200000 atoms):
-- Pure-Python loop: 2.7542 s
-- NumPy vectorized: 0.0003 s
-- NumPy is ~9676x faster
+
+## PW1 - Lab A: Reproducible Foundations
+
+What I built:
+I set up the CSPC repo with a conda environment, wrote a radioactive decay simulation, added tests for it, and compared how fast the loop version runs against the NumPy version.
+
+Speed comparison (loop vs NumPy):
+- loop  : 2.7542 s
+- numpy : 0.0003 s
+- speed-up: about 9676x faster
+
+Tests: all passing, yes
 
 Conclusion:
-The pure-Python loop checks each atom one by one,which is slow when there are many atoms.NumPy instead handles all atoms at once using a single vectorized operation,so it avoids Python's slow loop overhead.This is why the NumPy version finishes almost instantly while the loop version takes a few seconds.
+NumPy was way faster than I expected,mostly because it handles all the atoms at once instead of going through them one by one like the loop does.This lab also helped me get more comfortable with git branching and merging,since I hadn't really practiced that hands-on before.
