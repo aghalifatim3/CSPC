@@ -25,3 +25,16 @@ Create the environment for a given lab:
 
 **Conclusion:**
 - NumPy was way faster than I expected, mostly because it handles all the atoms at once instead of going through them one by one like the loop does. This lab also helped me get more comfortable with git branching and merging, since I hadn't really practiced that hands-on before
+
+---
+
+## PW1 - Lab B: Data, Plotting, and Automation
+
+What the data showed:
+The counts start around 5000 and drop off fast at the beginning, then slow down and flatten out toward the end.
+
+Did it match the analytical law?
+Yes, pretty closely. When I compared the two plots side by side, the observed points followed the same curve shape as the analytical exponential decay.
+
+Snakemake pipeline:
+The Snakefile has one rule that runs plot.py to build figure.png from the csv file, and it only reruns if the csv changes.
