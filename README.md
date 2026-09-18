@@ -3,6 +3,7 @@
 My coursework repository. Each practical is under PW/Lab folders.
 
 ## Setup
+
 Create the environment for a given lab:
 
     conda env create -f environment.yml
