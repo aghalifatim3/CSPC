@@ -59,3 +59,23 @@ ax3.legend()
 
 plt.tight_layout()
 plt.savefig("motion.png")
+
+t2, x, y2 = np.loadtxt("trajectory.csv", delimiter=",", skiprows=1, unpack=True)
+
+plt.figure()
+plt.plot(x, y2)
+plt.xlabel("x (m)")
+plt.ylabel("y (m)")
+plt.title("Trajectory path")
+plt.savefig("trajectory_path.png")
+
+vx = np.gradient(x, t2)
+vy = np.gradient(y2, t2)
+speed = np.sqrt(vx**2 + vy**2)
+
+plt.figure()
+plt.plot(t2, speed)
+plt.xlabel("time (s)")
+plt.ylabel("speed (m/s)")
+plt.title("Speed over time")
+plt.savefig("speed_over_time.png")
