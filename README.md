@@ -38,3 +38,13 @@ Yes, pretty closely. When I compared the two plots side by side, the observed po
 
 Snakemake pipeline:
 The Snakefile has one rule that runs plot.py to build figure.png from the csv file, and it only reruns if the csv changes.
+
+---
+
+## PW2 - Lab A: Motion from Tracking Data
+
+Mean acceleration measured: about -8.58 m/s2 (close to -9.81, the small difference comes from noise).
+
+Why the acceleration was noisy: acceleration comes from taking the derivative twice, and each derivative amplifies measurement noise, so by the second derivative the noise dominates even though the position data looked smooth.
+
+What integrating back showed: integrating the noisy acceleration back up recovered the position within about 0.78 meters of the original, showing that integration suppresses noise instead of amplifying it.
