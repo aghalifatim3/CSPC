@@ -51,3 +51,56 @@ What integrating back showed: integrating the noisy acceleration back up recover
 
 
 Bonus: I also plotted the 2D trajectory (x vs y) and computed the speed over time from vx and vy using the same gradient approach.
+
+## PW2 - Lab B: Optimization
+
+### Part 2 — Three routes to a minimum
+
+### 2A
+
+All three methods reached x ≈ 3 from x0 = 0, so they agree on the minimum.
+
+### 2B
+
+From x0 = 0:
+
+* Gradient descent: x ≈ -1.30084
+* Newton: x ≈ 0.16994, maximum
+* SLSQP: x ≈ -1.30086
+
+From x0 = 2:
+
+* Gradient descent: x ≈ 1.13090
+* Newton: x ≈ 1.13090, minimum
+* SLSQP: x ≈ -1.30064
+
+The methods do not always agree. The starting point affects the result, especially for Newton's method. Newton can find a stationary point that is a maximum rather than a minimum.
+
+### Part 3 — Reaction Rate Fitting
+
+The fitted rate constant was **k ≈ 0.26176**, which is close to the expected value of 0.25. The fitted exponential curve follows the measured concentration data.
+
+### Part 4 — Chemical Equilibrium
+
+For the reaction H2 + I2 ⇌ 2HI, both Newton's method and SLSQP gave approximately the same equilibrium extent:
+
+* Newton: x ≈ 0.66385
+* SLSQP: x ≈ 0.66385
+* They agree: True
+
+Equilibrium amounts:
+
+* H2 ≈ 0.33615 mol
+* I2 ≈ 0.33615 mol
+* HI ≈ 1.32770 mol
+
+The result agrees with the expected x ≈ 0.66 and HI ≈ 1.33 mol.
+
+### Part 5 — Titration Equivalence Point
+
+The equivalence point was found by calculating the slope of the pH curve using `np.gradient` and finding its maximum with `np.argmax`.
+
+* Equivalence point: **50.0 mL**
+* The result agrees with the expected value of about 50 mL.
+* The pH curve and its slope were plotted and saved as `titration.png`.
+
