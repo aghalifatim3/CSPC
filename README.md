@@ -48,3 +48,6 @@ Mean acceleration measured: about -8.58 m/s2 (close to -9.81, the small differen
 Why the acceleration was noisy: acceleration comes from taking the derivative twice, and each derivative amplifies measurement noise, so by the second derivative the noise dominates even though the position data looked smooth.
 
 What integrating back showed: integrating the noisy acceleration back up recovered the position within about 0.78 meters of the original, showing that integration suppresses noise instead of amplifying it.
+
+
+Bonus: I also plotted the 2D trajectory (x vs y) and computed the speed over time from vx and vy using the same gradient approach.
