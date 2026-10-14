@@ -201,3 +201,20 @@ Activate the Conda environment:
 
 ```bash
 conda activate cspc
+```
+
+Navigate to the PW3 directory:
+
+```bash
+cd ~/CSPC/PW3
+```
+
+Run the analysis:
+
+```bash
+python analysis/analysis.py
+```
+
+## Conclusion
+
+This practical work demonstrates how statistical methods can be used to describe data, assess normality, compare groups, and investigate associations. The results also highlight the importance of distinguishing correlation from causation.
