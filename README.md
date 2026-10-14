@@ -104,3 +104,100 @@ The equivalence point was found by calculating the slope of the pH curve using `
 * The result agrees with the expected value of about 50 mL.
 * The pH curve and its slope were plotted and saved as `titration.png`.
 
+# Practical Work 3: Data, Distributions, Testing, and Causation
+
+## Objective
+
+The objective of this practical work is to perform statistical analysis on two datasets using Python. The analysis includes descriptive statistics, distributions, normality tests, group comparisons, correlation, and the difference between correlation and causation.
+
+## Tools and Libraries
+
+- Python
+- Pandas
+- Matplotlib
+- SciPy
+
+## Datasets
+
+### 1. Heart Disease Dataset
+
+The Cleveland heart disease dataset is used to analyze patient characteristics and investigate differences between healthy individuals and individuals with heart disease.
+
+### 2. Chemicals and Cancer Dataset
+
+This dataset contains the following variables:
+
+- Benzene
+- Cadmium
+- Pollution index
+- Age
+- Malignancy
+
+It is used to investigate relationships between chemical exposure indicators and malignancy.
+
+## Analysis
+
+### Task 1: Load the Heart Disease Dataset
+
+The dataset is loaded using Pandas. Missing values are removed before analysis.
+
+### Task 2: Descriptive Statistics
+
+The mean, standard deviation, minimum, maximum, and quartiles are calculated for selected variables.
+
+### Task 3: Distributions and Normality Tests
+
+Histograms are created to visualize distributions. The Shapiro-Wilk test is used to assess normality.
+
+### Task 4: Comparison of Two Groups
+
+Maximum heart rate is compared between healthy individuals and individuals with heart disease using the Mann-Whitney U test.
+
+### Task 5: Correlation Analysis
+
+Spearman correlation is calculated to investigate the relationship between age and maximum heart rate.
+
+### Task 6: Load the Chemicals and Cancer Dataset
+
+The chemicals and cancer dataset is loaded using Pandas.
+
+### Task 7: Descriptive Statistics
+
+Descriptive statistics are calculated for the dataset variables.
+
+### Task 8: Distributions and Normality Tests
+
+Histograms and Shapiro-Wilk tests are used to examine the distributions.
+
+### Task 9: Correlation Analysis
+
+A correlation matrix is calculated. Spearman correlation is used to examine the relationship between pollution index and malignancy.
+
+### Task 10: Correlation vs Causation
+
+The results are interpreted carefully. A strong correlation does not necessarily mean that one variable causes changes in another.
+
+## Results
+
+- The selected heart disease variables do not follow normal distributions according to the Shapiro-Wilk tests.
+- Maximum heart rate differs significantly between the healthy and disease groups (Mann-Whitney U test, p < 0.001).
+- Age and maximum heart rate show a negative association (Spearman correlation approximately -0.393).
+- Pollution index and malignancy show a strong positive association (Spearman correlation approximately 0.900).
+- These associations do not, by themselves, establish causation.
+
+## Generated Figures
+
+The analysis generates the following figures:
+
+- `distributions.png`
+- `heart_rate_comparison.png`
+- `age_thalach.png`
+- `chemicals_distributions.png`
+- `pollution_malignancy.png`
+
+## How to Run
+
+Activate the Conda environment:
+
+```bash
+conda activate cspc
